@@ -1,6 +1,51 @@
-.icon {
+:root{
+    --custom-color:#be123c;
+}
+ul{
+    padding:0;
+}
+a:any-link{
+    color:white;
+    text-decoration-line: none;
+}
+a>.icon {
     height:16px;
     width:16px;
+    margin-right:1.5rem;
+    margin-left:0.5rem;
+}
+a>.logo{
+    background-image: url("../assets/icons/view-dashboard-variant.svg");
+    height:2rem;
+    width:2rem;
+    margin-right:1rem;
+}
+a>.home{
+    background-image:url("../assets/icons/home.svg");
+}
+a>.profile{
+    background-image: url("../assets/icons/card-account-details.svg");
+}
+a>.message{
+    background-image: url("../assets/icons/message.svg");
+}
+a>.history{
+    background-image: url("../assets/icons/history.svg");
+}
+a>.tasks{
+    background-image: url("../assets/icons/note.svg");
+}
+a>.communities{
+    background-image: url("../assets/icons/account-group.svg");
+}
+a>.settings{
+    background-image: url("../assets/icons/cogs.svg");
+}
+a>.support{
+    background-image: url("../assets/icons/help-box.svg");
+}
+a>.privacy{
+    background-image:url("../assets/icons/shield-check.svg");
 }
 .profile-picture{
     height:50px;
@@ -11,22 +56,41 @@ form > li {
     list-style-type: none;
 }
 .container{
+    width:100vw;
+    height:100vh;
     display:grid;
-    grid-template-columns: repeat(2,1fr 2fr );
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "nav header"
         "nav main";
 }
-header{
+.container>header{
     grid-area: header;
 }
-nav{
+.container>nav{
     grid-area:nav;
+    background-color: var(--custom-color);
 }
-main{
+.container >main{
     grid-area:main;
 }
-article > ul {
+nav > ul{
+    padding:0.8rem;
+}
+nav > ul >li >a{
+    display:flex;
+    color:white;
+    align-items: center;
+}
+li > a{
+    margin-bottom:0.5rem;
+}
+li:nth-child(1),
+li:nth-child(7){
+    margin-bottom:2rem;
+}
+main> article > ul {
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
 }
