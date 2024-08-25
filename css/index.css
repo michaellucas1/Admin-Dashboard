@@ -1,4 +1,32 @@
-img {
+.icon {
     height:16px;
     width:16px;
+}
+.profile-picture{
+    height:50px;
+    width:50px;
+}
+ul >li,
+form > li {
+    list-style-type: none;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr 2fr );
+    grid-template-areas:
+        "nav header"
+        "nav main";
+}
+header{
+    grid-area: header;
+}
+nav{
+    grid-area:nav;
+}
+main{
+    grid-area:main;
+}
+article > ul {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
 }
