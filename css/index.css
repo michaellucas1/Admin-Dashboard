@@ -8,7 +8,19 @@ ul > li > .button {
     border-radius: 20px;
     border: none;
     color:white;
+    box-shadow: 1px 1px 1px 1px rgba(59, 39, 39, 0.289);
     background-color: var(--custom-color-nav);
+}
+ul > li > .button:hover{
+    background-color: #c41a45b8;
+    
+}
+ul > li > .button:active{
+    background-color: #790b27d5;
+}
+h5{
+    font-size:12px;
+    font-weight: bold;
 }
 p{
     font-family: Arial, Helvetica, sans-serif;
@@ -68,7 +80,37 @@ a>.support{
 a>.privacy{
     background-image:url("../assets/icons/shield-check.svg");
 }
-
+a >.star-plus {
+    background-image:url("../assets/icons/star-plus-outline.svg");
+}
+a >.eye-plus {
+    background-image:url("../assets/icons/eye-plus-outline.svg");
+}
+a >.share {
+    background-image: url("../assets/icons/share-variant-outline.svg");
+}
+a > .cat-one {
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("../assets/profile/cat-1.jpg"); 
+}
+a > .cat-two {
+    background-image: url("../assets/profile/cat-2.jpg"); 
+}
+a > .cat-three {
+    background-image: url("../assets/profile/cat-3.jpg"); 
+}
+a > .user-picture {
+    background-image:url("../assets/profile/vecteezy_cat-brown-design_18746482.png");
+}
+a > .cat-one,
+a > .cat-two,
+a > .cat-three,
+a > .user-picture{
+    background-size:contain;
+    border-radius: 50%;
+    background-color: var(--custom-color-profile);
+}
 ul >li,
 form > li {
     list-style-type: none;
@@ -103,6 +145,7 @@ nav > ul >li >a{
 }
 li > a{
     margin-bottom:0.5rem;
+ 
 }
 nav > ul>li:nth-child(1),
 nav > ul>li:nth-child(7){
@@ -114,16 +157,20 @@ header {
 ul > form,
 header > ul:nth-child(2) > li:nth-child(2) {
     margin-right:auto;
+    margin-left:30px;
+}
+header > ul:nth-child(1) > li:nth-child(2){
+    margin-right:-15px;
 }
 ul > form,
 header > ul > li {
     align-self: center;
     margin-top:20px;
-    margin-left:10px;
+    margin-left: 5px;
+
 }
 header > ul {
-    margin-top:10px;
-    margin-bottom:30px;
+    margin-bottom:20px;
     flex:1;
 }
 header > ul > form > li > button{
@@ -143,17 +190,30 @@ li > .username-mini,
 li > .button{
     margin-right:20px;
 }
-li > .username-mini{
-    font-size: 12px;
+li > .username-big{
+    font-size: 18px;
 }
 li > .welcome-message{
     font-size:8px;
 }
 #search {
     border:none;
-    width:20rem;
+    padding-left:10px;
+    height:1.5rem;
+    width:35rem;
     border-radius: 10px;
     background-color: rgba(86, 86, 86, 0.388);
+}
+#search:hover,
+#search:focus{
+    background-color: rgba(86, 86, 86, 0.567);
+}
+#search-button{
+    cursor: pointer;
+    border-radius: 50%;
+}
+#search-button:hover{
+    background-color: rgba(0, 0, 0, 0.249);
 }
 .profile-picture-container{
     background-color: var(--custom-color-profile);
@@ -166,6 +226,7 @@ li > .welcome-message{
     height:40px;
     width:40px;
 }
+
 .small{
     transform:scale(0.75);
 }
@@ -176,7 +237,7 @@ ul > form,
 header > ul{
     display:flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 main{
     border: none; 
@@ -187,18 +248,56 @@ main > article,
 main > section {
     margin:25px;
 }
-main> article > ul {
+main> article > ul{
     display:grid;
-    grid-template-columns: repeat(3,200px);
-    grid-template-rows: repeat(3, 200px);
-    gap:20px 20px;
+    grid-template-columns: repeat(2,minmax(300px,1fr));
+    grid-template-rows: repeat(3, minmax(200px,1fr));
+    gap:27px 27px;
 }
 main > section > ul{
     display:grid;
-    grid-template-columns: 150px;
-    grid-template-rows: 200px;
+    grid-template-columns: 200px;
+    grid-template-rows: 300px;
 }
 article > ul > li,
 section > ul > li {
+    display:flex;
+    flex-wrap: wrap;
     background-color: white;
+    padding:25px 25px 25px 25px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.279);
 }
+article > ul > li > div {
+    align-self: flex-end;
+    display: inline-flex;
+    margin-left:auto;
+    margin-bottom:10px;
+    
+}
+li > p {
+    font-size:12px;
+    text-align: left;
+}
+li > h5,
+section > h3,
+div > h5 {
+    font-size: 12px;
+    font-weight: bold;
+}
+li > h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+section > ul > li > p{
+    font-size:10px;
+}
+section>h3,
+article>h3{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+section > ul:nth-of-type(2) > li{
+    font-size:12px;
+}
+
